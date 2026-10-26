@@ -25,12 +25,12 @@ UCL has a Slack workspace for computational questions — [join here](https://uc
 
 ## Data Processing and Analysis
 
-_Coming October 2026!!_
+_Coming 2027!!_
 
 
 ## Drop-ins
 
-**Drop-ins are paused for the 2026 summer break - see you in October!**
+**Drop-ins are paused for the 2026 summer break - see you later in 2026!**
 
 Come along to the Darwin Common Room for a drop-in with Biosciences Data Scientist James Gilbert. We can discuss any questions you have about your data, code, or analyses. No appointment needed! 
 
