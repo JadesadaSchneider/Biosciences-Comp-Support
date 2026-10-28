@@ -30,8 +30,8 @@ flowchart TD
 
     B -- Compute --> D{UCL-affiliated\nresearcher?}
     D -- Yes --> E{Scale?}
-    E -- "Moderate — standard\nbio/genomics workloads" --> F["🖥️ UCL HPC platforms\nMyriad, CS cluster"]
-    E -- "Large parallel jobs,\nno GPU needed" --> G["🖥️ Kathleen\nHigh-throughput, UCL ARC"]
+    E -- "Moderate — standard\nbio/genomics workloads" --> F["🖥️ UCL HPC platforms\nMyriad (ARC), CS cluster"]
+    E -- "Large parallel jobs,\nno GPU needed" --> G["🖥️ Kathleen (ARC)\nor CS cluster"]
     E -- "GPU-heavy or\nvery large scale" --> H{Funded?}
     H -- "Yes / can apply" --> I["🌐 ARCHER2 / JADE2\nNational facilities"]
     H -- "Need flexibility\nor quick start" --> J["☁️ Cloud\nAWS, GCP, Azure"]
