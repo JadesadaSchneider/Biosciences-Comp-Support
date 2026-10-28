@@ -55,7 +55,7 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 |---|---|---|---|---|---|
 | **Myriad** | General research computing, most biosciences workloads | SGE | Yes (UCL staff/students) | Yes | [rc.ucl.ac.uk/docs/Clusters/Myriad](https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/) |
 | **Kathleen** | High-throughput parallel jobs, large core counts | SGE | Yes (UCL staff/students) | No | [rc.ucl.ac.uk/docs/Clusters/Kathleen](https://www.rc.ucl.ac.uk/docs/Clusters/Kathleen/) |
-| **CS HPC cluster** | *[Details to be added]* | *TBC* | *TBC* | *TBC* | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
+| **CS HPC cluster** | Most biosciences analyses, offers flexibility in setup and systems | SGE | *CS TBC* | *CS TBC* | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
 | **Open OnDemand** | When you want a Jupyter or R Studio interface | N/A | Yes | Yes | [OnDemand Info](https://www.rc.ucl.ac.uk/docs/Supplementary/OnDemand/)  |
 
 ---
@@ -64,9 +64,9 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 **Myriad and Kathleen** — request an account via the [ARC self-service portal](https://www.rc.ucl.ac.uk/docs/Account_Services/). You will need a UCL userid. Access is usually granted within a few working days. No cost for standard use.
 
-**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. *[Further details to be added.]*
+**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days (*CS TBC*).
 
-**National facilities (ARCHER2, JADE2, etc.)** — access is via UKRI allocation. Your PI needs to apply through [SAFE](https://safe.epcc.ed.ac.uk/) or the relevant facility portal. Allocations are granted in compute-hours and typically require a short technical case.
+**National facilities (ARCHER2, JADE2, etc.)** — access is via UKRI allocation. PIs apply through [SAFE](https://safe.epcc.ed.ac.uk/) or the relevant facility portal. Allocations are granted in compute-hours and typically require a short technical case.
 
 **Cloud (AWS, GCP, Azure)** — UCL has framework agreements that may offer discounted or credited access. Contact your faculty research support team to find out what's available. For small-scale or exploratory use, free tiers are often sufficient.
 
@@ -78,17 +78,17 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 When you SSH into an HPC system, you land on a **login node** — a shared machine used by everyone for setting up, editing scripts, moving files, and submitting jobs. It is not for running analyses. Running heavy computation on the login node slows it down for all users and your process may be killed without warning.
 
-**Compute nodes** are where your analysis actually runs. You never access them directly — instead you describe what resources you need (cores, memory, time) in a job script, submit it to the queue, and the scheduler allocates you a compute node when one is available. This batch model is the fundamental difference from working on a laptop.
+**Compute nodes** are where your analysis actually runs. To run jobs on compute nodes, you describe what resources you need (cores, memory, time) in a job script, submit it to the queue, and the scheduler allocates you a compute node when one is available.
 
 ### GPUs
-GPUs are available on myriad. To submit a job requesting GPUs, see [here](https://www.rc.ucl.ac.uk/docs/Example_Jobscripts/#gpu-job-script-example).
+GPUs are available on myriad. To submit a job requesting GPUs, see [here](https://www.rc.ucl.ac.uk/docs/Example_Jobscripts/#gpu-job-script-example). On the CS cluster, GPUS are... (*CS TBC*)
 
 ### The basic workflow
 
-Myriad and Kathleen use **SGE (Sun Grid Engine)**. The CS cluster scheduler details are available at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/). If you have used SLURM elsewhere, the concepts are the same but the syntax differs.
+Myriad, Kathleen and the CS Cluster use **SGE (Sun Grid Engine)**. If you have used SLURM elsewhere, the concepts are the same but the syntax differs.
 
 1. SSH to the login node
-2. Stage your data (copy from RDSS or transfer via Globus — see the data sharing guide)
+2. Stage your data (e.g. copy from RDSS, transfer with `rsync` or `scp`, or transfer via Globus — see the data sharing guide)
 3. Write a job script specifying resources (cores, memory, wall time)
 4. Submit with `qsub`
 5. Monitor with `qstat`
@@ -108,16 +108,20 @@ A minimal SGE job script looks like:
 module load <your_software>
 your_command --input data/ --output results/
 ```
-
+## More info for getting started
+### ARC HPCs
 Full ARC documentation including array jobs, GPU requests, and interactive sessions: [rc.ucl.ac.uk/docs/](https://www.rc.ucl.ac.uk/docs/)
 
 > **If you are new to HPC**, ARC run regular introductory training — see the [ARC training pages](https://www.ucl.ac.uk/advanced-research-computing/education/training) before trying to figure things out from scratch.
+
+### CS HPC
+Full getting started info is available through the CS cluster [website](https://hpc.cs.ucl.ac.uk/index.html). You will need an account to receive the site login details before accessing that material. The CS cluster staff also provide regular inductions and training.
 
 ---
 
 ## Storage on HPC
 
-HPC storage is **not** the same as research data storage — see the storage guide for RDSS, RDR, and related services. The table below refers to Myriad/Kathleen; CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/).
+HPC storage is **not** the same as research data storage — see the [storage guide](https://github.com/UCL-Biosciences/Biosciences-Comp-Support/blob/main/UCL_comp_guides/data_storage_at_UCL.md) for RDSS, RDR, and related services. The table below refers to Myriad/Kathleen; CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/).
 
 | Location | Purpose | Backed up | Purged |
 |---|---|---|---|
@@ -140,7 +144,7 @@ RDSS can be accessed directly from Myriad login nodes. See the ISD guide for cur
 
 ## Software, modules, and containers
 
-The following applies to Myriad and Kathleen. CS cluster software environment details are available at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/).
+The following applies to Myriad and Kathleen. CS cluster software environment details are available at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) (*CS TBC* - do you want to add some links to key info here? Or collect any key info?)
 
 ### Environment modules
 
@@ -153,7 +157,7 @@ module list             # see what's currently loaded
 module unload <name>    # remove a package
 ```
 
-If software you need is not available on Myriad/Kathleen, request it via [rc-support@ucl.ac.uk](mailto:rc-support@ucl.ac.uk), or install it yourself using conda (see below).
+If software you need is not available you can request it via the cluster's support staff or install it yourself (e.g. using conda, see below).
 
 ### Conda
 
@@ -187,7 +191,7 @@ HPC has a learning curve and is not always the most efficient route. Consider al
 
 - **Your analysis is interactive** — HPC batch queues mean waiting; for exploratory work a cloud VM or UCL's virtual desktop may be faster to iterate on
 - **You need specialist infrastructure** — clinical data requires the DSH/TRE; some deep learning workloads are better served by JADE2 or cloud GPU instances
-- **Your collaborators need access** — national facilities or cloud are often easier to share with external partners than UCL HPC
+- **Your collaborators need access** — national facilities or cloud might be easier to share with external partners than UCL HPC
 
 ---
 
