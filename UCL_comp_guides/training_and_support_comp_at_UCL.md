@@ -47,6 +47,9 @@ Want to improve your computational skills but not sure where to start? We recomm
  
 *Relevant courses:*
 <!-- COURSES:computational-foundations-and-machine-learning:START -->
+- [BIOS0030](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0030) — Introduction to Coding for Bioscience Research (Python)
+- [BIOS0040](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0040) — Statistical Machine Learning for Biosciences
+- [NEUR0024](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0024) — Introduction to Python for Neuroscientists
 <!-- COURSES:computational-foundations-and-machine-learning:END -->
  
 ---
@@ -57,6 +60,9 @@ Want to improve your computational skills but not sure where to start? We recomm
  
 *Relevant courses:*
 <!-- COURSES:modelling-simulation-and-complex-systems:START -->
+- [CELL0027](https://www.ucl.ac.uk/module-catalogue/modules/CELL0027) — Computational Cell Biophysics
+- [BIOL0053](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0053) — Data Science Methods in Biology
+- [CELL0014](https://www.ucl.ac.uk/module-catalogue/modules/CELL0014) — Dynamic Biological Systems
 <!-- COURSES:modelling-simulation-and-complex-systems:END -->
  
 ---
@@ -67,6 +73,13 @@ Want to improve your computational skills but not sure where to start? We recomm
  
 *Relevant courses:*
 <!-- COURSES:computational-neuroscience-and-cognition:START -->
+- [ANAT0019](https://www.ucl.ac.uk/module-catalogue/modules/ANAT0019) — Cognitive and Computational Neuroscience
+- [MATH0101](https://www.ucl.ac.uk/module-catalogue/modules/MATH0101) — Linear Algebra for Data Science
+- [NEUR0016](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0016) — Neural computation: Models of brain function
+- [NEUR0019](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0019) — Foundations of Neuroinformatics
+- [NEUR0024](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0024) — Introduction to Python for Neuroscientists
+- [PHAR0015](https://www.ucl.ac.uk/module-catalogue/modules/PHAR0015) — Psychopharmacology
+- [PHOL0009](https://www.ucl.ac.uk/module-catalogue/modules/PHOL0009) — The cellular basis of brain function
 <!-- COURSES:computational-neuroscience-and-cognition:END -->
  
 ---
@@ -77,6 +90,13 @@ Want to improve your computational skills but not sure where to start? We recomm
  
 *Relevant courses:*
 <!-- COURSES:structural-biology-and-computational-biochemistry:START -->
+- [BIOC0016](https://www.ucl.ac.uk/module-catalogue/modules/BIOC0016) — Computational and Systems Biology
+- [BIOC0039](https://www.ucl.ac.uk/module-catalogue/modules/BIOC0039) — Quantitative Biochemistry
+- [BIOC0036](https://www.ucl.ac.uk/module-catalogue/modules/BIOC0036) — Practical and Computational Biomolecular Structure and Function
+- [BIOC0003](https://www.ucl.ac.uk/module-catalogue/modules/BIOC0003) — Experimental Biochemistry
+- [BIOC0006](https://www.ucl.ac.uk/module-catalogue/modules/BIOC0006) — Essential Protein Structure and Function
+- [BIOC0023](https://www.ucl.ac.uk/module-catalogue/modules/BIOC0023) — Specialist Research Project in Multi-Omics and Data Science
+- [BIOC0029](https://www.ucl.ac.uk/module-catalogue/modules/BIOC0029) — Specialist Research Project in Protein Structure and Function
 <!-- COURSES:structural-biology-and-computational-biochemistry:END -->
  
 ---
@@ -87,6 +107,15 @@ Want to improve your computational skills but not sure where to start? We recomm
  
 *Relevant courses:*
 <!-- COURSES:computational-genetics:START -->
+- [BIOL0003](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0003) — Introduction to Genetics
+- [CELL0013](https://www.ucl.ac.uk/module-catalogue/modules/CELL0013) — Functional Genetics of Model Systems
+- [BIOL0010](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0010) — Introduction to Human Genetics
+- [BIOL0021](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0021) — Advanced Human Genetics
+- [BIOL0025](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0025) — Regulatory Genomics and Evolution
+- [BIOL0029](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0029) — Computational Biology
+- [BIOL0033](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0033) — Molecular Evolution
+- [BIOL0034](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0034) — Applications in Human Genetics
+- [BIOL0050](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0050) — Advanced Computational Biology
 <!-- COURSES:computational-genetics:END -->
  
 ---
@@ -97,6 +126,8 @@ Want to improve your computational skills but not sure where to start? We recomm
  
 *Relevant courses:*
 <!-- COURSES:computational-biomedicine-and-biomedical-engineering:START -->
+- [BIOL0053](https://www.ucl.ac.uk/module-catalogue/modules/BIOL0053) — Data Science Methods in Biology
+- [BIOS0030](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0030) — Introduction to Coding for Bioscience Research
 <!-- COURSES:computational-biomedicine-and-biomedical-engineering:END -->
  
 ---
@@ -107,6 +138,11 @@ Want to improve your computational skills but not sure where to start? We recomm
  
 *Relevant courses:*
 <!-- COURSES:computational-ecology-and-biodiversity:START -->
+- [BIOS0002](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0002) — Computational Methods in Biodiversity Research
+- [BIOS0032](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0032) — AI for the Environment
+- [BIOS0031](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0031) — Technology for Nature
+- [BIOS0050](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0050) — Data Science for Ecology, Climate Change and Health
+- [BIOS0052](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0052) — Human and Ecosystem Health in a Changing World
 <!-- COURSES:computational-ecology-and-biodiversity:END -->
  
 
