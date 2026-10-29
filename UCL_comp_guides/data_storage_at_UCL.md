@@ -86,9 +86,6 @@ flowchart TD
 - Consider filename conventions, experimental metadata (description in readme.txt files) and good research data management practices
 - If you arent sure, you can always as a data steward
 
-**Project Setup/Structure**
-- *Nick* to add something here.
-
 ---
 
 ### RDR — UCL Research Data Repository
