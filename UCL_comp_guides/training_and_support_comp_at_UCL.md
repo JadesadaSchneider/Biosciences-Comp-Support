@@ -42,45 +42,74 @@ UCL's Advanced Research Computing centre offers training covering HPC, software 
 Want to improve your computational skills but not sure where to start? We recommend beginning with some of the general training linked above. Below, we outline the skills relevant to different computational biology roles, based on the [research themes in Biosciences](https://www.ucl.ac.uk/life-sciences/biosciences/computational-biology). For each theme we give an overview of the core skills involved, plus pointers to relevant courses for undergrads and postgrads.
 
 ### Computational Foundations and Machine Learning
-
+ 
 **Overview:** Work in this area involves developing and applying algorithms for biological data analysis, including statistical learning, deep learning, and data engineering. Core skills include Python programming, linear algebra and statistics, familiarity with ML frameworks (e.g. scikit-learn, PyTorch), and version control with Git. Experience with large dataset handling and HPC environments is increasingly important.
-
+ 
+*Relevant courses:*
+<!-- COURSES:computational-foundations-and-machine-learning:START -->
+<!-- COURSES:computational-foundations-and-machine-learning:END -->
+ 
 ---
-
+ 
 ### Modelling, Simulation and Complex Systems
-
+ 
 **Overview:** This theme covers mathematical and computational modelling of biological systems — from gene regulatory networks to population dynamics. Key skills include differential equations and dynamical systems, scientific programming (Python or MATLAB), and experience with simulation frameworks. Good grounding in statistics and model fitting is essential.
-
-*Relevant courses: [TO BE ADDED]*
-
+ 
+*Relevant courses:*
+<!-- COURSES:modelling-simulation-and-complex-systems:START -->
+<!-- COURSES:modelling-simulation-and-complex-systems:END -->
+ 
 ---
-
+ 
 ### Computational Neuroscience and Cognition
-
+ 
 **Overview:** Researchers here use mathematical and computational tools to understand how the brain works. Skills span neural data analysis (spike trains, LFPs, imaging), dynamical systems modelling, and programming in Python. Familiarity with neuroscience datasets and tools (e.g. MNE, Brian2, NEURON) is useful.
-
-*Relevant courses: [TO BE ADDED]*
-
+ 
+*Relevant courses:*
+<!-- COURSES:computational-neuroscience-and-cognition:START -->
+<!-- COURSES:computational-neuroscience-and-cognition:END -->
+ 
 ---
-
+ 
 ### Structural Biology and Computational Biochemistry
-
+ 
 **Overview:** This area involves computational modelling and analysis of protein structures and reaction pathways — including molecular dynamics, docking, and increasingly AlphaFold-based approaches. Key skills include Python or scripting for structure analysis, familiarity with tools such as PyMOL, GROMACS, or AMBER, and basic biochemistry knowledge.
-
-*Relevant courses: [TO BE ADDED]*
-
+ 
+*Relevant courses:*
+<!-- COURSES:structural-biology-and-computational-biochemistry:START -->
+<!-- COURSES:structural-biology-and-computational-biochemistry:END -->
+ 
 ---
-
+ 
 ### Computational Genetics
-
+ 
 **Overview:** This theme covers large-scale analysis of genes and genomes — including variant calling, gene expression and epigenetics. Core skills include Linux command line, scripting (Python or R), experience with bioinformatics pipelines (e.g. Nextflow or Snakemake), and HPC use. Familiarity with standard toolkits (GATK, samtools, etc.) is expected.
-
-*Relevant courses: [TO BE ADDED]*
-
+ 
+*Relevant courses:*
+<!-- COURSES:computational-genetics:START -->
+<!-- COURSES:computational-genetics:END -->
+ 
 ---
-
+ 
 ### Computational Biomedicine and Biomedical Engineering
-
+ 
 **Overview:** Researchers here apply computational methods to physiology and clinical data — including medical imaging, multi-omics integration, and disease modelling. Skills range from image analysis and signal processing to statistical modelling and machine learning. Python and R are both widely used; experience with clinical or large-scale health datasets is a plus.
+ 
+*Relevant courses:*
+<!-- COURSES:computational-biomedicine-and-biomedical-engineering:START -->
+<!-- COURSES:computational-biomedicine-and-biomedical-engineering:END -->
+ 
+---
+ 
+### Computational Ecology and Biodiversity
+ 
+**Overview:** This theme develops quantitative tools to understand biodiversity, ecosystems, and global change, often from large, noisy and heterogeneous ecological and genomic datasets. Work ranges from species distribution models and macroecological analyses to AI-based analysis of sensor data (satellite imagery, audio, camera traps) and environmental DNA (eDNA) bioinformatics. Core skills include R (and increasingly Python), statistical modelling, handling and visualising spatial data, and working with large public biodiversity databases. Familiarity with machine learning and HPC or cloud environments is increasingly useful.
+ 
+*Relevant courses:*
+<!-- COURSES:computational-ecology-and-biodiversity:START -->
+<!-- COURSES:computational-ecology-and-biodiversity:END -->
+ 
 
-*Relevant courses: [TO BE ADDED]*
+
+
+
