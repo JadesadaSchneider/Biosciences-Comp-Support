@@ -1,4 +1,10 @@
+---
+title: Green computing
+nav_order: 6
+---
+
 # Green Computing
+{: .no_toc }
 
 _This is a draft. More info with respect to Green Compute and Green Disc applications to come early 2027_
 
