@@ -1,7 +1,5 @@
 # Support for Computational Research at UCL
 
-[INTRO TEXT TO BE ADDED]
-
 ## Drop-ins
 
 The quickest way to get help is to come to one of our drop-in sessions — no appointment needed.
@@ -10,13 +8,7 @@ The quickest way to get help is to come to one of our drop-in sessions — no ap
 
 #### Data Science
 
-Come along to the Darwin Common Room for a drop-in with Biosciences Data Scientist James Gilbert. We can discuss any questions you have about your data, code, or analyses. No appointment needed!
-
-<!-- NEXT_EVENTS_START -->
-- **Tue, 28 Apr 2026** — 10:00-11:00 — Darwin Common Room — Data Science Drop-Ins
-- **Tue, 12 May 2026** — 10:00-11:00 — Darwin Common Room — Data Science Drop-Ins
-- **Tue, 26 May 2026** — 10:00-11:00 — Darwin Common Room — Data Science Drop-Ins
-<!-- NEXT_EVENTS_END -->
+Come along to the Darwin Common Room for a drop-in with Biosciences Data Scientist James Gilbert. We can discuss any questions you have about your data, code, or analyses. No appointment needed! More info [here](https://github.com/UCL-Biosciences/Biosciences-Comp-Support#drop-ins).
 
 #### Bioimage Analysis
 
@@ -33,9 +25,7 @@ For more structured support, there's a wide range of training available at UCL.
 
 ### Biosciences
 
-Biosciences has its own training introducing the key skills needed for computational research in biology at UCL. Last year's pilot material is here (LINK TO BE ADDED), with a new format and updated content coming this year.
-
-Biosciences researchers also have access to a range of additional resources. [RESOURCES TO BE ADDED]
+Biosciences has its own training introducing the key skills needed for computational research in biology at UCL. See [here](https://github.com/UCL-Biosciences/Biosciences-Computational-Training/) for the training material and information on upcoming courses.
 
 ### ARC
 
@@ -44,7 +34,6 @@ UCL's Advanced Research Computing centre offers training covering HPC, software 
 ### Others at UCL
 
 - **Doctoral School** — training for PhD students covering research skills, including computational sessions. See the [Doctoral School training pages](https://www.ucl.ac.uk/doctoral-school/research-training).
-- [OTHER PROVIDERS TO BE ADDED]
 
 ---
 
