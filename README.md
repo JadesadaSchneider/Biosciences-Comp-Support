@@ -30,8 +30,6 @@ _Coming 2027!!_
 
 ## Drop-ins
 
-**Drop-ins are paused for the 2026 summer break - see you later in 2026!**
-
 Come along to the Darwin Common Room for a drop-in with Biosciences Data Scientist James Gilbert. We can discuss any questions you have about your data, code, or analyses. No appointment needed! 
 
 <!-- NEXT_EVENTS_START -->
