@@ -16,7 +16,7 @@ HPC is not always the answer. Before requesting access, it's worth being clear o
 | Analysis needs more RAM than laptop has | HPC compute — check memory requirements before submitting |
 | Analysis needs a GPU | Check availability on UCL platforms, or cloud |
 | Need to run hundreds of jobs in parallel | HPC — this is where it excels |
-| Collaborators outside UCL need same environment | Cloud or national facilities may be more practical |
+| Collaborators outside UCL need same environment | CS Cluster offers access to external collaborators if they are working with a supported PI |
 
 ---
 
@@ -62,7 +62,7 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 ## Getting access
 
-**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days. Access is considered at the PI level, which we are always happy to discuss.
+**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days (typically within 24 hours). Access eligibility is generally assessed at the Principal Investigator (PI) level, and we are always happy to discuss individual requirements. We also welcome external collaborators working with our supported research groups and laboratories, facilitating seamless collaboration across institutions. 
 
 **Myriad and Kathleen** — request an account via the [ARC self-service portal](https://www.rc.ucl.ac.uk/docs/Account_Services/). You will need a UCL userid. Access is usually granted within a few working days. No cost for standard use.
 
