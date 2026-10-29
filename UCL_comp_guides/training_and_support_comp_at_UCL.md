@@ -45,8 +45,6 @@ Want to improve your computational skills but not sure where to start? We recomm
 
 **Overview:** Work in this area involves developing and applying algorithms for biological data analysis, including statistical learning, deep learning, and data engineering. Core skills include Python programming, linear algebra and statistics, familiarity with ML frameworks (e.g. scikit-learn, PyTorch), and version control with Git. Experience with large dataset handling and HPC environments is increasingly important.
 
-*Relevant courses: [TO BE ADDED]*
-
 ---
 
 ### Modelling, Simulation and Complex Systems
