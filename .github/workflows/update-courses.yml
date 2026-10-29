@@ -1,0 +1,47 @@
+name: Update theme courses
+
+on:
+  schedule:
+    - cron: "17 6 1 9 *"  # monthly, 1st of the month
+  workflow_dispatch: {}
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/update_courses.py'
+      - 'UCL_comp_guides/training_and_support_comp_at_UCL.md'
+
+permissions:
+  contents: write
+
+jobs:
+  update-courses:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run course updater
+        id: update
+        run: python scripts/update_courses.py
+        continue-on-error: true
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add UCL_comp_guides/training_and_support_comp_at_UCL.md
+          git diff --cached --quiet || git commit -m "auto: update theme courses"
+          git push
+
+      - name: Fail if any theme could not be updated
+        if: steps.update.outcome == 'failure'
+        run: exit 1
