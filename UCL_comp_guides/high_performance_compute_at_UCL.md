@@ -53,7 +53,7 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 | System | Best for | Scheduler | Free to use | GPU | More info |
 |---|---|---|---|---|---|
-| **CS HPC cluster** | Supports general and specialised workflows across many domains, including offering flexible and bespoke solutions all areas of Biosciences and Life Sciences | SGE | Depends on funding | Yes, supporting long runtimes across multiple chip types | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
+| **CS HPC cluster** | Supports general and specialised workflows across many domains, including offering flexible and bespoke solutions across fields in Biosciences and Life Sciences | SGE | Depends on funding | Yes, with support for long-running workloads across multiple processor architectures. | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
 | **Myriad** | General research computing, most biosciences workloads | SGE | Yes (UCL staff/students) | Yes | [rc.ucl.ac.uk/docs/Clusters/Myriad](https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/) |
 | **Kathleen** | High-throughput parallel jobs, large core counts | SGE | Yes (UCL staff/students) | No | [rc.ucl.ac.uk/docs/Clusters/Kathleen](https://www.rc.ucl.ac.uk/docs/Clusters/Kathleen/) |
 | **Open OnDemand** | When you want a Jupyter or R Studio interface | N/A | Yes | Yes | [OnDemand Info](https://www.rc.ucl.ac.uk/docs/Supplementary/OnDemand/)  |
@@ -81,7 +81,12 @@ When you SSH into an HPC system, you land on a **login node** — a shared machi
 **Compute nodes** are where your analysis actually runs. To run jobs on compute nodes, you describe what resources you need (cores, memory, time) in a job script, submit it to the queue, and the scheduler allocates you the requested allocation once available.
 
 ### GPUs
-The CS cluster offers a wide and continuously expanding range of GPUs, to fit the workflow requirements and vRAM requirements of users across UCL and beyond. On the CS cluster, our suite of GPUs are available through job scripts [example](). The CS cluster understands the ambitions of researchers, and offers generous maximum wallclock times whilst using GPUs across all users. If you require an exceptionally long amount of time to run, we are always happy to discuss a bespoke solution with researchers.
+#### GPUs on CS Cluster
+The CS Cluster offers a diverse and continuously expanding range of GPUs, designed to accommodate the computational demands and GPU memory (VRAM) requirements of researchers across UCL and beyond. We recognise that research workloads can be computationally intensive and may require extended runtimes. To support this, the CS Cluster offers generous maximum wallclock limits for GPU jobs, while ensuring fair access to across our users. GPU resources can be requested directly through job scripts, as demonstrated in our [documentation](https://hpc.cs.ucl.ac.uk/gpus/index.html).
+
+
+
+
 
 GPUs are available on myriad. To submit a job requesting GPUs, see [here](https://www.rc.ucl.ac.uk/docs/Example_Jobscripts/#gpu-job-script-example).
 
@@ -110,6 +115,7 @@ A minimal SGE job script looks like:
 module load <your_software> ##TO-DO: On CS Cluster software is loaded differently
 your_command --input data/ --output results/
 ```
+
 ## More info for getting started
 ### ARC HPCs
 Full ARC documentation including array jobs, GPU requests, and interactive sessions: [rc.ucl.ac.uk/docs/](https://www.rc.ucl.ac.uk/docs/)
@@ -117,13 +123,13 @@ Full ARC documentation including array jobs, GPU requests, and interactive sessi
 > **If you are new to HPC**, ARC run regular introductory training — see the [ARC training pages](https://www.ucl.ac.uk/advanced-research-computing/education/training) before trying to figure things out from scratch.
 
 ### CS HPC
-Full getting started info is available through the CS cluster [website](https://hpc.cs.ucl.ac.uk/index.html). You will need an account to receive the site login details before accessing that material. The CS cluster staff also provide regular inductions and training.
+Full getting started info is available through the CS cluster [website](https://hpc.cs.ucl.ac.uk/index.html). You will need an account to receive the site login details before accessing this material.
 
-> **If you are new to HPC**, the CS HPC runs introductory training every Tuesday and Thursday, teaching users how to run both basic and ambitious workflows.
+> **If you are new to HPC**, HPC engineers from the CS cluster offer introductory training sessions every Tuesday and Thursday, helping users develop the skills and confidence to run workloads ranging from basic computational tasks to more advanced research workflows.
 ---
 
 ## Storage on HPC - CS Cluster
-CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/). On the CS Cluster, we offer generous project storage space where researchers can store their data.
+CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/). On the CS Cluster, we offer generous project storage space where researchers can store their data. Importantly, once your data is in a project storage space it's conveniently available across all log-in and compute nodes.
 
 | Type | Purpose | Backed up | Purged |
 |---|---|---|---|
@@ -133,11 +139,17 @@ CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/)
 
 ### Moving data to the CS Cluster
 
-- We offer data transfer through multiple industry standard tools to convenience our users. These can be used for transfers of any size, though we recommend rsync for large transfers
+We offer data transfer through multiple industry standard tools to convenience our users (below). These can be used for transfers of any size, though we recommend rsync for large transfers. 
+
 - scp
+- Filezilla
 - rsync
 - WinSCP
-- Once data is on our proejct stores, it's mounted acrss the entire cluster. No need to copy data over! 
+- Aspera Connect
+- Aspera CLI
+- Globus Connect Personal
+
+We also have specialised data transfer nodes available to facilitate fast downloads of large datasets.
 
 ## Storage on HPC - Myriad
 
@@ -210,13 +222,6 @@ PATH=/share/apps/python3.10.0-sharedplus/bin:$PATH
 LD_LIBRARY_PATH=/share/apps/python3.10.0-sharedplus/lib:$LD_LIBRARY_PATH
 source moleRatvenv/bin/activate
 ```
-
-
-
-
-
-
-
 
 ## Software, modules, and containers
 
