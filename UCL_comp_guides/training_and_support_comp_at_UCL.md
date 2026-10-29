@@ -1,4 +1,10 @@
+---
+title: Support and training
+nav_order: 2
+---
+
 # Support for Computational Research at UCL Biosciences
+{: .no_toc }
 
 ## Drop-ins
 
@@ -12,7 +18,7 @@ Come along to the Darwin Common Room for a drop-in with Biosciences Data Scienti
 
 #### Bioimage Analysis
 
-Drop-ins with the bioimage analysis team: https://www.uclccmd.co.uk/drop-in
+Drop-ins with the bioimage analysis team: <https://www.uclccmd.co.uk/drop-in>
 
 #### General Computational
 ARC also offers regular drop-in sessions with support a range of topics, including coding, data management and using HPCs. More info [here](https://www.ucl.ac.uk/advanced-research-computing/community-events/drop-sessions).
@@ -144,8 +150,3 @@ Want to improve your computational skills but not sure where to start? We recomm
 - [BIOS0050](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0050) — Data Science for Ecology, Climate Change and Health
 - [BIOS0052](https://www.ucl.ac.uk/module-catalogue/modules/BIOS0052) — Human and Ecosystem Health in a Changing World
 <!-- COURSES:computational-ecology-and-biodiversity:END -->
- 
-
-
-
-
