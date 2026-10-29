@@ -11,7 +11,7 @@ HPC is not always the answer. Before requesting access, it's worth being clear o
 
 | Problem | Likely solution |
 |---|---|
-| Files too large to store on laptop | RDSS (see storage guide) — you may not need HPC at all |
+| Files too large to store on laptop | Project Storages on Computer Science HPC system, which is widely used across Biosciences . RDSS (see storage guide) — you may not need HPC at all |
 | Analysis too slow on laptop | HPC compute — see the UCL platforms below |
 | Analysis needs more RAM than laptop has | HPC compute — check memory requirements before submitting |
 | Analysis needs a GPU | Check availability on UCL platforms, or cloud |
@@ -49,22 +49,22 @@ flowchart TD
 
 ## UCL systems at a glance
 
-UCL has two main HPC platforms available to Biosciences researchers: systems managed by [Advanced Research Computing (ARC)](https://www.rc.ucl.ac.uk/) and the [CS HPC cluster](https://hpc.cs.ucl.ac.uk/) managed by the Department of Computer Science. Both are useful options — the right choice depends on your workload and collaborators.
+UCL has two main HPC platforms available to Biosciences researchers: systems managed by [Advanced Research Computing (ARC)](https://www.rc.ucl.ac.uk/) and the [CS HPC cluster](https://hpc.cs.ucl.ac.uk/) managed by the Department of Computer Science. Both are potential options, depending on your funding source.
 
 | System | Best for | Scheduler | Free to use | GPU | More info |
 |---|---|---|---|---|---|
+| **CS HPC cluster** | Supports general and specialised workflows across many domains, including offering flexible and bespoke solutions all areas of Biosciences and Life Sciences | SGE | Depends on funding | Yes, supporting long runtimes across multiple chip types | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
 | **Myriad** | General research computing, most biosciences workloads | SGE | Yes (UCL staff/students) | Yes | [rc.ucl.ac.uk/docs/Clusters/Myriad](https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/) |
 | **Kathleen** | High-throughput parallel jobs, large core counts | SGE | Yes (UCL staff/students) | No | [rc.ucl.ac.uk/docs/Clusters/Kathleen](https://www.rc.ucl.ac.uk/docs/Clusters/Kathleen/) |
-| **CS HPC cluster** | Most biosciences analyses, offers flexibility in setup and systems | SGE | *CS TBC* | *CS TBC* | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
 | **Open OnDemand** | When you want a Jupyter or R Studio interface | N/A | Yes | Yes | [OnDemand Info](https://www.rc.ucl.ac.uk/docs/Supplementary/OnDemand/)  |
 
 ---
 
 ## Getting access
 
-**Myriad and Kathleen** — request an account via the [ARC self-service portal](https://www.rc.ucl.ac.uk/docs/Account_Services/). You will need a UCL userid. Access is usually granted within a few working days. No cost for standard use.
+**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days. Access is considered at the PI level, which we are always happy to discuss.
 
-**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days (*CS TBC*).
+**Myriad and Kathleen** — request an account via the [ARC self-service portal](https://www.rc.ucl.ac.uk/docs/Account_Services/). You will need a UCL userid. Access is usually granted within a few working days. No cost for standard use.
 
 **National facilities (ARCHER2, JADE2, etc.)** — access is via UKRI allocation. PIs apply through [SAFE](https://safe.epcc.ed.ac.uk/) or the relevant facility portal. Allocations are granted in compute-hours and typically require a short technical case.
 
@@ -78,17 +78,19 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 When you SSH into an HPC system, you land on a **login node** — a shared machine used by everyone for setting up, editing scripts, moving files, and submitting jobs. It is not for running analyses. Running heavy computation on the login node slows it down for all users and your process may be killed without warning.
 
-**Compute nodes** are where your analysis actually runs. To run jobs on compute nodes, you describe what resources you need (cores, memory, time) in a job script, submit it to the queue, and the scheduler allocates you a compute node when one is available.
+**Compute nodes** are where your analysis actually runs. To run jobs on compute nodes, you describe what resources you need (cores, memory, time) in a job script, submit it to the queue, and the scheduler allocates you the requested allocation once available.
 
 ### GPUs
-GPUs are available on myriad. To submit a job requesting GPUs, see [here](https://www.rc.ucl.ac.uk/docs/Example_Jobscripts/#gpu-job-script-example). On the CS cluster, GPUS are... (*CS TBC*)
+The CS cluster offers a wide and continuously expanding range of GPUs, to fit the workflow requirements and vRAM requirements of users across UCL and beyond. On the CS cluster, our suite of GPUs are available through job scripts [example](). The CS cluster understands the ambitions of researchers, and offers generous maximum wallclock times whilst using GPUs across all users. If you require an exceptionally long amount of time to run, we are always happy to discuss a bespoke solution with researchers.
+
+GPUs are available on myriad. To submit a job requesting GPUs, see [here](https://www.rc.ucl.ac.uk/docs/Example_Jobscripts/#gpu-job-script-example).
 
 ### The basic workflow
 
 Myriad, Kathleen and the CS Cluster use **SGE (Sun Grid Engine)**. If you have used SLURM elsewhere, the concepts are the same but the syntax differs.
 
 1. SSH to the login node
-2. Stage your data (e.g. copy from RDSS, transfer with `rsync` or `scp`, or transfer via Globus — see the data sharing guide)
+2. Stage your data (e.g. copy from RDSS, transfer with `rsync` or `scp`, or transfer via Globus — see the data sharing guide) ##TO-DO: Not true for CS Cluster, data on our project stores it already mounted for users.
 3. Write a job script specifying resources (cores, memory, wall time)
 4. Submit with `qsub`
 5. Monitor with `qstat`
@@ -101,11 +103,11 @@ A minimal SGE job script looks like:
 #$ -l h_rt=2:00:00        # wall time
 #$ -l mem=8G              # RAM per core
 #$ -pe smp 4              # number of cores
-#$ -cwd                   # run from current directory
+#$ -cwd                   # run from current directory ##TO-DO: We don't recommend setting this as it can often lead to bugs in 
 #$ -o logs/job.out
 #$ -e logs/job.err
 
-module load <your_software>
+module load <your_software> ##TO-DO: On CS Cluster software is loaded differently
 your_command --input data/ --output results/
 ```
 ## More info for getting started
@@ -117,11 +119,29 @@ Full ARC documentation including array jobs, GPU requests, and interactive sessi
 ### CS HPC
 Full getting started info is available through the CS cluster [website](https://hpc.cs.ucl.ac.uk/index.html). You will need an account to receive the site login details before accessing that material. The CS cluster staff also provide regular inductions and training.
 
+> **If you are new to HPC**, the CS HPC runs introductory training every Tuesday and Thursday, teaching users how to run both basic and ambitious workflows.
 ---
 
-## Storage on HPC
+## Storage on HPC - CS Cluster
+CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/). On the CS Cluster, we offer generous project storage space where researchers can store their data.
 
-HPC storage is **not** the same as research data storage — see the [storage guide](https://github.com/UCL-Biosciences/Biosciences-Comp-Support/blob/main/UCL_comp_guides/data_storage_at_UCL.md) for RDSS, RDR, and related services. The table below refers to Myriad/Kathleen; CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/).
+| Type | Purpose | Backed up | Purged |
+|---|---|---|---|
+| Home Directory | Scripts, config, small files | No | No |
+| Project Storage | Long-term research data, any key scripts, files | Upon Request | No |
+| Scratch | Temporary files within a single job | No | On job end |
+
+### Moving data to the CS Cluster
+
+- We offer data transfer through multiple industry standard tools to convenience our users. These can be used for transfers of any size, though we recommend rsync for large transfers
+- scp
+- rsync
+- WinSCP
+- Once data is on our proejct stores, it's mounted acrss the entire cluster. No need to copy data over! 
+
+## Storage on HPC - Myriad
+
+HPC storage is **not** the same as research data storage — see the [storage guide](https://github.com/UCL-Biosciences/Biosciences-Comp-Support/blob/main/UCL_comp_guides/data_storage_at_UCL.md) for RDSS, RDR, and related services. The table below refers to Myriad/Kathleen
 
 | Location | Purpose | Backed up | Purged |
 |---|---|---|---|
@@ -142,9 +162,65 @@ RDSS can be accessed directly from Myriad login nodes. See the ISD guide for cur
 
 ---
 
+## Software on the CS Cluster
+
+CS Cluster offers a wealth of software, which can be found in /share/apps . This also includes specialized software for bioinformatics, which can be found in /share/apps/genomics
+
+To use installed software, you need to configure two Linux environment variables: **PATH** and **LD_LIBRARY_PATH**.
+
+- **PATH**: Tells Linux where to look for executable programs when you type a command. By adding a software installation's binary (bin) directory to PATH, you can run its commands without specifying their full file paths.
+
+- **LD_LIBRARY_PATH**: Tells the dynamic linker where to look for shared libraries (.so files) required by a program when it starts. In other words, some software depends on libraries installed outside the standard system directories, so their locations must be specified.
+  
+Below is an example of loading Python version 3.10.0:
+
+```
+PATH=/share/apps/python3.10.0-sharedplus/bin:$PATH
+LD_LIBRARY_PATH=/share/apps/python3.10.0-sharedplus/lib:$LD_LIBRARY_PATH
+```
+
+
+## Setting up Python environments with venv
+We recommend using Python's built-in venv functionality to create lightweight, isolated environments for your projects. These environments are straightforward to manage and help minimise unnecessary overhead on shared HPC infrastructure.
+
+Alternative environment managers, such as Conda, can introduce additional challenges in an HPC environment, particularly due to their storage requirements, large numbers of small files, and filesystem metadata operations. When used extensively across many users, these can place additional pressure on shared storage systems and affect overall performance.
+
+### Setting up a venv
+```
+# When downloading packages, run a more recent GCC toolchain to support compilation
+scl enable devtoolset-11 bash
+# Load the version of Python you wish to use
+PATH=/share/apps/python3.10.0-sharedplus/bin:$PATH
+LD_LIBRARY_PATH=/share/apps/python3.10.0-sharedplus/lib:$LD_LIBRARY_PATH
+# Create the venv
+python3 -m venv moleRatvenv
+# Activate this new venv
+source moleRatvenv/bin/activate
+# Within the venv, use pip to install required packaes
+pip install numpy
+pip install matplotlib
+# Once finished, get out of the venv
+deactivate
+```
+
+### Running a pre-existing venv
+```
+# Importantly, run this at the start of your script if you wish to use the venv
+PATH=/share/apps/python3.10.0-sharedplus/bin:$PATH
+LD_LIBRARY_PATH=/share/apps/python3.10.0-sharedplus/lib:$LD_LIBRARY_PATH
+source moleRatvenv/bin/activate
+```
+
+
+
+
+
+
+
+
 ## Software, modules, and containers
 
-The following applies to Myriad and Kathleen. CS cluster software environment details are available at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) (*CS TBC* - do you want to add some links to key info here? Or collect any key info?)
+The following applies to Myriad and Kathleen.
 
 ### Environment modules
 
@@ -176,7 +252,7 @@ Build and test your environment on the login node, then activate it in your job 
 
 ### Containers (Apptainer / Singularity)
 
-Myriad supports **Apptainer** (formerly Singularity) for containerised workflows. This is useful when you need a specific software stack, are running a pipeline with a published container image (e.g. from Docker Hub), or want fully reproducible environments. Docker itself is not supported on HPC for security reasons — Apptainer converts Docker images automatically:
+Myriad and CS Cluster supports **Apptainer** (formerly Singularity) for containerised workflows. This is useful when you need a specific software stack, are running a pipeline with a published container image (e.g. from Docker Hub), or want fully reproducible environments. Docker itself is not supported on HPC for security reasons — Apptainer converts Docker images automatically:
 
 ```bash
 apptainer pull docker://myimage:tag
