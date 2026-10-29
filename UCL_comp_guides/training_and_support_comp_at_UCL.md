@@ -19,7 +19,7 @@ ARC also offers regular drop-in sessions with support a range of topics, includi
 
 ---
 
-## Training
+## Postgraduate Training
 
 For more structured support, there's a wide range of training available at UCL.
 
