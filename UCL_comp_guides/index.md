@@ -9,11 +9,10 @@ permalink: /
 
 Guides for navigating UCL's computational resources, from the Biosciences Data Science team. Aimed at anyone doing computational research in the Division of Biosciences.
 
-- [Support and training]({% link training_and_support_comp_at_UCL.md %}): drop-ins, courses and training profiles
-- [Data storage]({% link data_storage_at_UCL.md %}): RDSS, RDR, DSH/TRE and everyday storage
-- [Data sharing and transfer]({% link data_sharing_at_UCL.md %}): collaborators, Globus, large transfers
-- [HPC and cloud]({% link high_performance_compute_at_UCL.md %}): Myriad, Kathleen, CS cluster, national facilities
-- [Green computing]({% link green_computing.md %}): reducing footprint and Green DiSC accreditation
+{% assign guides = site.pages | where_exp: "p", "p.nav_order" | where_exp: "p", "p.url != page.url" | sort: "nav_order" %}
+{% for p in guides %}
+- [{{ p.title }}]({{ p.url | relative_url }}){% if p.description %}: {{ p.description }}{% endif %}
+{% endfor %}
 
 ## Contributions
 These guides are aimed at being practical summaries that help with your day-to-day computational lives. We would love for them to be a shared living resource and welcome suggestions and changes from all users. Please see the [contributions](https://github.com/UCL-Biosciences/Biosciences-Comp-Support/tree/main#how-do-i-contribute) section for instructions on contributing to any info in this repository.
