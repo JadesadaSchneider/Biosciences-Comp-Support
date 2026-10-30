@@ -14,7 +14,7 @@ HPC is not always the answer. Before requesting access, it's worth being clear o
 | Files too large to store on laptop | Project Storages on Computer Science HPC system, which is widely used across Biosciences . RDSS (see storage guide) — you may not need HPC at all |
 | Analysis too slow on laptop | HPC compute — see the UCL platforms below |
 | Analysis needs more RAM than laptop has | HPC compute — check memory requirements before submitting |
-| Analysis needs a GPU | Check availability on UCL platforms, or cloud |
+| Analysis needs a GPU | CS HPC system offers a wide range of GPUs, check availability on other UCL platforms, or cloud |
 | Need to run hundreds of jobs in parallel | HPC — this is where it excels |
 | Collaborators outside UCL need same environment | CS Cluster offers access to external collaborators if they are working with a supported PI |
 
@@ -62,7 +62,7 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 ## Getting access
 
-**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days (typically within 24 hours). Access eligibility is generally assessed at the Principal Investigator (PI) level, and we are always happy to discuss individual requirements. We also welcome external collaborators working with our supported research groups and laboratories, facilitating seamless collaboration across institutions. 
+**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days. Access eligibility is generally assessed at the Principal Investigator (PI) level, and we are always happy to discuss individual requirements. We also welcome external collaborators working with our supported research groups and laboratories, facilitating seamless collaboration across institutions. 
 
 **Myriad and Kathleen** — request an account via the [ARC self-service portal](https://www.rc.ucl.ac.uk/docs/Account_Services/). You will need a UCL userid. Access is usually granted within a few working days. No cost for standard use.
 
@@ -82,11 +82,7 @@ When you SSH into an HPC system, you land on a **login node** — a shared machi
 
 ### GPUs
 #### GPUs on CS Cluster
-The CS Cluster offers a diverse and continuously expanding range of GPUs, designed to accommodate the computational demands and GPU memory (VRAM) requirements of researchers across UCL and beyond. We recognise that research workloads can be computationally intensive and may require extended runtimes. To support this, the CS Cluster offers generous maximum wallclock limits for GPU jobs, while ensuring fair access to across our users. GPU resources can be requested directly through job scripts, as demonstrated in our [documentation](https://hpc.cs.ucl.ac.uk/gpus/index.html).
-
-
-
-
+The CS Cluster offers a diverse and continuously expanding range of GPUs, designed to accommodate the computational demands and GPU memory (VRAM) requirements of researchers across UCL and beyond. In the Computer Science department, we recognise that research workloads can be computationally intensive and may require extended runtimes. To support this, the CS Cluster offers generous maximum wallclock limits for GPU jobs, while ensuring fair access to across our users. GPU resources can be requested directly through job scripts, as demonstrated in our [documentation](https://hpc.cs.ucl.ac.uk/gpus/index.html).
 
 GPUs are available on myriad. To submit a job requesting GPUs, see [here](https://www.rc.ucl.ac.uk/docs/Example_Jobscripts/#gpu-job-script-example).
 
@@ -108,7 +104,7 @@ A minimal SGE job script looks like:
 #$ -l h_rt=2:00:00        # wall time
 #$ -l mem=8G              # RAM per core
 #$ -pe smp 4              # number of cores
-#$ -cwd                   # run from current directory ##TO-DO: We don't recommend setting this as it can often lead to bugs in 
+#$ -cwd                   # run from current directory ##TO-DO: We don't recommend setting this as it can often lead to bugs
 #$ -o logs/job.out
 #$ -e logs/job.err
 
@@ -123,7 +119,7 @@ Full ARC documentation including array jobs, GPU requests, and interactive sessi
 > **If you are new to HPC**, ARC run regular introductory training — see the [ARC training pages](https://www.ucl.ac.uk/advanced-research-computing/education/training) before trying to figure things out from scratch.
 
 ### CS HPC
-Full getting started info is available through the CS cluster [website](https://hpc.cs.ucl.ac.uk/index.html). You will need an account to receive the site login details before accessing this material.
+Full documentation including parallel CPU jobs, GPU jobs, and interactive sessions: [website](https://hpc.cs.ucl.ac.uk/index.html). You will need an account to receive the site login details before accessing this material.
 
 > **If you are new to HPC**, HPC engineers from the CS cluster offer introductory training sessions every Tuesday and Thursday, helping users develop the skills and confidence to run workloads ranging from basic computational tasks to more advanced research workflows.
 ---
@@ -139,7 +135,7 @@ CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/)
 
 ### Moving data to the CS Cluster
 
-We offer data transfer through multiple industry standard tools to convenience our users (below). These can be used for transfers of any size, though we recommend rsync for large transfers. 
+We offer data transfer through multiple tools to suit the various use cases of our users (below).
 
 - scp
 - Filezilla
@@ -176,8 +172,8 @@ RDSS can be accessed directly from Myriad login nodes. See the ISD guide for cur
 
 ## Software on the CS Cluster
 
-CS Cluster offers a wealth of software, which can be found in /share/apps . This also includes specialized software for bioinformatics, which can be found in /share/apps/genomics
-
+CS Cluster offers a wealth of software, which can be found in /share/apps . This also includes specialized software for bioinformatics, which can be found in /share/apps/genomics (this directory includes software across multiple 'omics).
+ 
 To use installed software, you need to configure two Linux environment variables: **PATH** and **LD_LIBRARY_PATH**.
 
 - **PATH**: Tells Linux where to look for executable programs when you type a command. By adding a software installation's binary (bin) directory to PATH, you can run its commands without specifying their full file paths.
@@ -191,26 +187,30 @@ PATH=/share/apps/python3.10.0-sharedplus/bin:$PATH
 LD_LIBRARY_PATH=/share/apps/python3.10.0-sharedplus/lib:$LD_LIBRARY_PATH
 ```
 
-
-## Setting up Python environments with venv
+### CS Cluster - Setting up Python environments with venv
 We recommend using Python's built-in venv functionality to create lightweight, isolated environments for your projects. These environments are straightforward to manage and help minimise unnecessary overhead on shared HPC infrastructure.
 
-Alternative environment managers, such as Conda, can introduce additional challenges in an HPC environment, particularly due to their storage requirements, large numbers of small files, and filesystem metadata operations. When used extensively across many users, these can place additional pressure on shared storage systems and affect overall performance.
+Alternative environment managers, such as Conda, can introduce additional challenges in an HPC environment, particularly due to their storage requirements, large numbers of small files, and filesystem metadata operations. When used extensively across many users, these can place additional pressure on shared storage systems and affect overall performance. We strive to support our user base in maintaining HPC practices to a high standard, to ensure our entire ecosystem is reliably performant.
 
 ### Setting up a venv
 ```
 # When downloading packages, run a more recent GCC toolchain to support compilation
 scl enable devtoolset-11 bash
+
 # Load the version of Python you wish to use
 PATH=/share/apps/python3.10.0-sharedplus/bin:$PATH
 LD_LIBRARY_PATH=/share/apps/python3.10.0-sharedplus/lib:$LD_LIBRARY_PATH
+
 # Create the venv
 python3 -m venv moleRatvenv
+
 # Activate this new venv
 source moleRatvenv/bin/activate
+
 # Within the venv, use pip to install required packaes
 pip install numpy
 pip install matplotlib
+
 # Once finished, get out of the venv
 deactivate
 ```
@@ -255,7 +255,7 @@ conda install <packages>
 
 Build and test your environment on the login node, then activate it in your job script using the same two `module load` / `source` lines before calling your commands.
 
-### Containers (Apptainer / Singularity)
+## Containers (Apptainer / Singularity) ##TO-DO: This applies to use as well, perhaps have it as a separate section
 
 Myriad and CS Cluster supports **Apptainer** (formerly Singularity) for containerised workflows. This is useful when you need a specific software stack, are running a pipeline with a published container image (e.g. from Docker Hub), or want fully reproducible environments. Docker itself is not supported on HPC for security reasons — Apptainer converts Docker images automatically:
 
