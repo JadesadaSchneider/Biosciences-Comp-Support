@@ -8,7 +8,7 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/update_courses.py'
-      - 'UCL_comp_guides/_training_and_support_comp_at_UCL.md'
+      - 'UCL_comp_guides/training_and_support_comp_at_UCL.md'
 
 permissions:
   contents: write
