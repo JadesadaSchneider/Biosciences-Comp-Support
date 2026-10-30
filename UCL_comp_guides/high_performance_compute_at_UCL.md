@@ -18,7 +18,7 @@ HPC is not always the answer. Before requesting access, it's worth being clear o
 
 | Problem | Likely solution |
 |---|---|
-| Files too large to store on laptop | RDSS (see [storage guide]({% link UCL_comp_guides/data_storage_at_UCL.md %})) — you may not need HPC at all |
+| Files too large to store on laptop | RDSS (see [storage guide]({% link data_storage_at_UCL.md %})) — you may not need HPC at all |
 | Analysis too slow on laptop | HPC compute — see the UCL platforms below |
 | Analysis needs more RAM than laptop has | HPC compute — check memory requirements before submitting |
 | Analysis needs a GPU | Check availability on UCL platforms, or cloud |
@@ -95,7 +95,7 @@ GPUs are available on myriad. To submit a job requesting GPUs, see [here](https:
 Myriad, Kathleen and the CS Cluster use **SGE (Sun Grid Engine)**. If you have used SLURM elsewhere, the concepts are the same but the syntax differs.
 
 1. SSH to the login node
-2. Stage your data (e.g. copy from RDSS, transfer with `rsync` or `scp`, or transfer via Globus — see the [data sharing guide]({% link UCL_comp_guides/data_sharing_at_UCL.md %}))
+2. Stage your data (e.g. copy from RDSS, transfer with `rsync` or `scp`, or transfer via Globus — see the [data sharing guide]({% link data_sharing_at_UCL.md %}))
 3. Write a job script specifying resources (cores, memory, wall time)
 4. Submit with `qsub`
 5. Monitor with `qstat`
@@ -128,7 +128,7 @@ Full getting started info is available through the CS cluster [website](https://
 
 ## Storage on HPC
 
-HPC storage is **not** the same as research data storage — see the [storage guide]({% link UCL_comp_guides/data_storage_at_UCL.md %}) for RDSS, RDR, and related services. The table below refers to Myriad/Kathleen; CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/).
+HPC storage is **not** the same as research data storage — see the [storage guide]({% link data_storage_at_UCL.md %}) for RDSS, RDR, and related services. The table below refers to Myriad/Kathleen; CS cluster storage is described at [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/).
 
 | Location | Purpose | Backed up | Purged |
 |---|---|---|---|
@@ -144,7 +144,7 @@ RDSS can be accessed directly from Myriad login nodes. See the ISD guide for cur
 ### Moving data to/from HPC
 
 - **Small files**: `scp` or `rsync` over SSH to the RDSS or login node
-- **Large files**: use Globus (see [data sharing guide]({% link UCL_comp_guides/data_sharing_at_UCL.md %})) — more reliable than rsync for large transfers and can be left unattended
+- **Large files**: use Globus (see [data sharing guide]({% link data_sharing_at_UCL.md %})) — more reliable than rsync for large transfers and can be left unattended
 - **From RDSS to scratch before a job**: use `rsync` from the login node to copy from RDSS to scratch. Myriad compute-nodes can't read from RDSS
 
 ---
