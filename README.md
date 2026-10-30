@@ -3,9 +3,10 @@ Welcome to UCL Biosciences' github, where we store Division-related code, traini
 
 [This repository](https://github.com/UCL-Biosciences/Biosciences-Comp-Support) provides information about computational research support activities in UCL's Division of Biosciences. This is aimed at anyone doing computational research in the Division. Read on for info about:
 
-- [guides](https://github.com/UCL-Biosciences/Biosciences-Comp-Support/tree/main/UCL_comp_guides) summarising data management, sharing and analysis using UCL infrastructure (including HPC clusters)
+- Our [computational guides](https://ucl-biosciences.github.io/Biosciences-Comp-Support/) include data storage, sharing and analysis using UCL infrastructure (including HPC clusters)
 - collaboration and support for data analysis pipelines
 - support and training for computational research
+
 
 ## Computational Support
 
