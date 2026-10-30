@@ -1,6 +1,7 @@
 ---
 title: Green computing
 nav_order: 6
+published: false
 ---
 
 # Green Computing
