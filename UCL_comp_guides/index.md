@@ -9,11 +9,11 @@ permalink: /
 
 Guides for navigating UCL's computational resources, from the Biosciences Data Science team. Aimed at anyone doing computational research in the Division of Biosciences.
 
-- [Support and training]({% link UCL_comp_guides/training_and_support_comp_at_UCL.md %}): drop-ins, courses and training profiles
-- [Data storage]({% link UCL_comp_guides/data_storage_at_UCL.md %}): RDSS, RDR, DSH/TRE and everyday storage
-- [Data sharing and transfer]({% link UCL_comp_guides/data_sharing_at_UCL.md %}): collaborators, Globus, large transfers
-- [HPC and cloud]({% link UCL_comp_guides/high_performance_compute_at_UCL.md %}): Myriad, Kathleen, CS cluster, national facilities
-- [Green computing]({% link UCL_comp_guides/green_computing.md %}): reducing footprint and Green DiSC accreditation
+- [Support and training]({% link training_and_support_comp_at_UCL.md %}): drop-ins, courses and training profiles
+- [Data storage]({% link data_storage_at_UCL.md %}): RDSS, RDR, DSH/TRE and everyday storage
+- [Data sharing and transfer]({% link data_sharing_at_UCL.md %}): collaborators, Globus, large transfers
+- [HPC and cloud]({% link high_performance_compute_at_UCL.md %}): Myriad, Kathleen, CS cluster, national facilities
+- [Green computing]({% link green_computing.md %}): reducing footprint and Green DiSC accreditation
 
 ## Get in touch
 
