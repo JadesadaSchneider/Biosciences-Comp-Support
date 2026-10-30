@@ -1,4 +1,11 @@
+---
+title: Data storage
+nav_order: 3
+---
+
 # Data Storage Guide — UCL Biosciences
+{: .no_toc }
+
 **Note**. This is a work-in-progress - some details may need updating/amending.
 
 > **Who is this for?** PIs, postdocs, and PhD students who need to store, share, or archive research data at UCL.  
@@ -82,7 +89,7 @@ flowchart TD
 ---
 
 ### RDR — UCL Research Data Repository
-**Use when:** a project is ending or a paper is being submitted and there is no domain-specific repository available. *Check the resource https://fairsharing.org/ for potential respositories for your data type
+**Use when:** a project is ending or a paper is being submitted and there is no domain-specific repository available. *Check the resource <https://fairsharing.org/> for potential respositories for your data type
 
 **Key facts:**
 - Data is **publicly accessible** and assigned a DOI — treat it as permanent identifier
@@ -162,4 +169,4 @@ UCL's [Research Data Management Team](https://library-guides.ucl.ac.uk/research-
 | RDSS project setup, storage limits, file count issues | [researchdata-support@ucl.ac.uk](mailto:researchdata-support@ucl.ac.uk) |
 | DSH / TRE access | ARC |
 | DMP advice, RDR deposits | [researchdata-support@ucl.ac.uk](mailto:researchdata-support@ucl.ac.uk) |
-| HPC storage (Myriad scratch, Lustre) | See [HPC guide](https://github.com/UCL-Biosciences/Biosciences-Comp-Support/blob/main/UCL_comp_guides/high_performance_compute_at_UCL.md) |
+| HPC storage (Myriad scratch, Lustre) | See [HPC guide]({% link UCL_comp_guides/high_performance_compute_at_UCL.md %}) |

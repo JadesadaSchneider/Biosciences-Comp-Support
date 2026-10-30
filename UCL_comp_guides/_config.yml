@@ -1,0 +1,25 @@
+title: UCL Biosciences Computational Support
+description: Guides for computational research at UCL Biosciences
+remote_theme: just-the-docs/just-the-docs
+url: https://ucl-biosciences.github.io
+baseurl: /Biosciences-Comp-Support
+
+search_enabled: true
+heading_anchors: true
+
+# Mermaid diagrams (script is loaded in _includes/head_custom.html)
+mermaid:
+  version: "10.9.1"
+
+aux_links:
+  "GitHub repository":
+    - "https://github.com/UCL-Biosciences/Biosciences-Comp-Support"
+
+# Keep everything that isn't a guide out of the built site
+exclude:
+  - README.md
+  - events/
+  - scripts/
+  - .github/
+  - Gemfile
+  - Gemfile.lock
