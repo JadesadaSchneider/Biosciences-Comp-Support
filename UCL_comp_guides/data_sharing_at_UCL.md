@@ -56,7 +56,7 @@ flowchart TD
 
 ```
 
-> ⚠️ **Never use personal email, WeTransfer, or USB drives for research data.** These bypass UCL data governance and may breach funder or ethics requirements.
+> ⚠️ **Do not use personal email, WeTransfer, or unencrypted USB drives for research data.**
 
 ---
 
