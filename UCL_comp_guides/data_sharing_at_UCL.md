@@ -145,4 +145,4 @@ See the HPC guide for Myriad scratch policies and mounting RDSS on the cluster.
 | Globus endpoint setup, HPC transfers | [researchdata-support@ucl.ac.uk](mailto:researchdata-support@ucl.ac.uk) |
 | DSH / TRE access | ARC |
 | VPN setup | [ISD VPN guidance](https://www.ucl.ac.uk/isd/services/get-connected/ucl-virtual-private-network-vpn) |
-| HPC storage and scratch policies | See [HPC guide]({% link UCL_comp_guides/high_performance_compute_at_UCL.md %}) |
+| HPC storage and scratch policies | See [HPC guide]({% link high_performance_compute_at_UCL.md %}) |
