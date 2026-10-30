@@ -169,4 +169,4 @@ UCL's [Research Data Management Team](https://library-guides.ucl.ac.uk/research-
 | RDSS project setup, storage limits, file count issues | [researchdata-support@ucl.ac.uk](mailto:researchdata-support@ucl.ac.uk) |
 | DSH / TRE access | ARC |
 | DMP advice, RDR deposits | [researchdata-support@ucl.ac.uk](mailto:researchdata-support@ucl.ac.uk) |
-| HPC storage (Myriad scratch, Lustre) | See [HPC guide]({% link UCL_comp_guides/high_performance_compute_at_UCL.md %}) |
+| HPC storage (Myriad scratch, Lustre) | See [HPC guide]({% link high_performance_compute_at_UCL.md %}) |
