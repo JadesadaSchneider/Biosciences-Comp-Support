@@ -15,6 +15,9 @@ Guides for navigating UCL's computational resources, from the Biosciences Data S
 - [HPC and cloud]({% link high_performance_compute_at_UCL.md %}): Myriad, Kathleen, CS cluster, national facilities
 - [Green computing]({% link green_computing.md %}): reducing footprint and Green DiSC accreditation
 
+## Contributions
+These guides are aimed at being practical summaries that help with your day-to-day computational lives. We would love for them to be a shared living resource and welcome suggestions and changes from all users. Please see the [contributions](https://github.com/UCL-Biosciences/Biosciences-Comp-Support/tree/main#how-do-i-contribute) section for instructions on contributing to any info in this repository.
+
 ## Get in touch
 
 [Book a meeting with James Gilbert](https://outlook.office.com/bookwithme/user/d23d2d9663fa4276b318d8ae8f40ccbb@ucl.ac.uk/meetingtype/GP1vEk6SdU6fTvgYLBKK8Q2?anonymous&ismsaljsauthenabled&ep=mlink), Senior Research Data Scientist, or email [james.d.gilbert@ucl.ac.uk](mailto:james.d.gilbert@ucl.ac.uk).
