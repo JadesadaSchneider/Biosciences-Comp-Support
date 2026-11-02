@@ -11,7 +11,7 @@ HPC is not always the answer. Before requesting access, it's worth being clear o
 
 | Problem | Likely solution |
 |---|---|
-| Files too large to store on laptop | Project Storages on Computer Science HPC system, which is widely used across Biosciences . RDSS (see storage guide) — you may not need HPC at all |
+| Files too large to store on laptop | Project Storages on Computer Science HPC system. RDSS (see storage guide) — you may not need HPC at all |
 | Analysis too slow on laptop | HPC compute — see the UCL platforms below |
 | Analysis needs more RAM than laptop has | HPC compute — check memory requirements before submitting |
 | Analysis needs a GPU | CS HPC system offers a wide range of GPUs, check availability on other UCL platforms, or cloud |
@@ -53,7 +53,7 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 | System | Best for | Scheduler | Free to use | GPU | More info |
 |---|---|---|---|---|---|
-| **CS HPC cluster** | Supports general and specialised workflows across many domains, including offering flexible and bespoke solutions across fields in Biosciences and Life Sciences | SGE | Depends on funding | Yes, with support for long-running workloads across multiple processor architectures. | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
+| **CS HPC cluster** | Supports general and specialised workflows across many domains, including offering flexible and bespoke solutions across fields in Biosciences and Life Sciences | SGE | Depends on funding | Yes | [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) |
 | **Myriad** | General research computing, most biosciences workloads | SGE | Yes (UCL staff/students) | Yes | [rc.ucl.ac.uk/docs/Clusters/Myriad](https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/) |
 | **Kathleen** | High-throughput parallel jobs, large core counts | SGE | Yes (UCL staff/students) | No | [rc.ucl.ac.uk/docs/Clusters/Kathleen](https://www.rc.ucl.ac.uk/docs/Clusters/Kathleen/) |
 | **Open OnDemand** | When you want a Jupyter or R Studio interface | N/A | Yes | Yes | [OnDemand Info](https://www.rc.ucl.ac.uk/docs/Supplementary/OnDemand/)  |
@@ -62,7 +62,7 @@ UCL has two main HPC platforms available to Biosciences researchers: systems man
 
 ## Getting access
 
-**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days. Access eligibility is generally assessed at the Principal Investigator (PI) level, and we are always happy to discuss individual requirements. We also welcome external collaborators working with our supported research groups and laboratories, facilitating seamless collaboration across institutions. 
+**CS HPC cluster** — see [hpc.cs.ucl.ac.uk](https://hpc.cs.ucl.ac.uk/) for access procedures. Fill in [this form](https://hpc.cs.ucl.ac.uk/account-form/index.html) to request an account, which is generally confirmed within a few working days. Access eligibility is generally assessed at the Principal Investigator (PI) level, and the CS Cluster team is always happy to discuss individual requirements. The CS cluster also welcomes external collaborators working with our supported research groups and laboratories, facilitating seamless collaboration across institutions. 
 
 **Myriad and Kathleen** — request an account via the [ARC self-service portal](https://www.rc.ucl.ac.uk/docs/Account_Services/). You will need a UCL userid. Access is usually granted within a few working days. No cost for standard use.
 
